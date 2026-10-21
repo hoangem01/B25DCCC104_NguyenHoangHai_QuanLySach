@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <EditText android:id="@+id/edtTitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Tên sách (Ví dụ: Đắc nhân tâm)"/>
+        <EditText android:id="@+id/edtAuthor" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Tác giả (Ví dụ: Dale Carnegie)" android:layout_marginTop="8dp"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Thể loại" android:layout_marginTop="16dp"/>
+        <Spinner
+            android:id="@+id/spCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/categories_array"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Tình trạng đọc" android:layout_marginTop="16dp"/>
+        <RadioGroup android:id="@+id/rgStatus" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+            <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Chưa đọc" android:checked="true"/>
+            <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Đang đọc"/>
+            <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Đã đọc"/>
+        </RadioGroup>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Đánh giá" android:layout_marginTop="16dp"/>
+        <RatingBar android:id="@+id/ratingBar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:numStars="5" android:stepSize="1"/>
+
+        <EditText
+            android:id="@+id/edtNote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nhập ghi chú (nhiều dòng)..."
+            android:inputType="textMultiLine"
+            android:lines="4"
+            android:gravity="top|left"
+            android:layout_marginTop="16dp"/>
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lưu sách"
+            android:backgroundTint="#00796B"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="24dp"/>
+    </LinearLayout>
+</ScrollView>

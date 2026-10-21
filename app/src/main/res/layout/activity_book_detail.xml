@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView android:id="@+id/tvTitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="24sp" android:textStyle="bold" android:textColor="#000" android:text="Tên sách"/>
+    <TextView android:id="@+id/tvAuthorCat" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Tác giả • Thể loại" android:textSize="16sp" android:layout_marginTop="8dp"/>
+    <TextView android:id="@+id/tvStatus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Tình trạng" android:padding="4dp" android:background="#FFF3E0" android:textColor="#E65100" android:layout_marginTop="8dp"/>
+
+    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#CCCCCC" android:layout_marginTop="16dp" android:layout_marginBottom="16dp"/>
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Đánh giá" android:textStyle="bold"/>
+    <RatingBar android:id="@+id/ratingBarDetail" android:layout_width="wrap_content" android:layout_height="wrap_content" android:numStars="5" android:stepSize="1"/>
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Ghi chú" android:textStyle="bold" android:layout_marginTop="16dp"/>
+    <TextView android:id="@+id/tvNote" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Nội dung ghi chú" android:layout_marginTop="8dp"/>
+
+    <!-- Lớp đẩy các nút bấm xuống dưới cùng -->
+    <Space android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"/>
+
+    <Button android:id="@+id/btnMarkRead" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Đánh dấu đã đọc" android:backgroundTint="#00796B" android:textColor="#FFFFFF"/>
+    <Button android:id="@+id/btnBack" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Quay lại" android:backgroundTint="#808080" android:textColor="#FFFFFF"/>
+    <Button android:id="@+id/btnDelete" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Xóa sách" android:backgroundTint="#D32F2F" android:textColor="#FFFFFF"/>
+</LinearLayout>
